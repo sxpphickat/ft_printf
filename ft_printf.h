@@ -6,17 +6,22 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:31:44 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/20 16:14:34 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/21 15:38:48 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include "./libft/libft.h"
 # include <unistd.h>
 
-
-void	ft_putunbr_fd(unsigned int n, int fd);
+int	ft_printf(const char *s, ...);
+int		ft_putunbr_print(unsigned int n);
+int		ft_hex_print(char xX, unsigned int	nb);
+int		ft_pointeraddress_print(unsigned long nb);
+int		ft_putchar_print(char c);
+int		ft_putstr_print(char *s);
+int		ft_putnbr_print(int n);
+int		ft_print_params(char c, va_list params);
 
 # endif
