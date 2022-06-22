@@ -1,7 +1,7 @@
 
 #include "ft_printf.h"
 
-int		ft_putnbr_print(int n);
+int		ft_putnbr_print(int n)
 {
 	char	c;
 	static int	len;
@@ -20,7 +20,7 @@ int		ft_putnbr_print(int n);
 	}
 	if (n >= 10)
 	{
-		ft_putnbr_fd(n / 10);
+		ft_putnbr_print(n / 10);
 		n = n % 10;
 	}
 	c = n + 48;
