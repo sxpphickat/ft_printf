@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:22 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 10:25:40 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/22 12:44:08 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,11 @@ int	ft_printf(const char *s, ...)
 			len += ft_print_params(*s, params);
 			s++;
 		}
-		write(1, s, 1);
-		if (*s != 0)
+		if (*s != '%')
+			write(1, s, 1);
+		else if (*s != '%')
+			s++;
+		if (*s != 0 && *s != '%')
 		{
 			s++;
 			len++;
@@ -48,7 +51,7 @@ int	ft_print_params(char c, va_list params)
 	if (c == 's')
 		len += ft_putstr_print(va_arg(params, char *));
 	if (c == 'i' || c == 'd')
-		len += ft_putnbr_print(va_arg(params, int));
+		len += ft_putnbr_print(va_arg(params, long long));
 	if (c == 'u')
 		len += ft_putunbr_print(va_arg(params, unsigned int));
 	if (c == 'x')
@@ -67,10 +70,13 @@ int	ft_print_params(char c, va_list params)
 
 /*
 #include <stdio.h>
+#include <limits.h>
 
 int	main(void)
 {
-	ft_printf("len: %i\n", ft_printf("%s\n", "\0"));
-	printf("len: %i\n", printf("%s\n", "\0"));
+	//ft_printf(" %i %i %i %i %i ", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX);
+	ft_printf(" %%%% ");
+	printf("\n");
+	printf(" %%%% ");
 }
 */
