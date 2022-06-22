@@ -6,15 +6,15 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:34:32 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 07:34:42 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/22 08:37:58 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_putunbr_print(unsigned int n)
+int	ft_putunbr_print(unsigned int n)
 {
-	char	c;
+	char		c;
 	static int	len;
 
 	len = 0;

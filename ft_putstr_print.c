@@ -6,13 +6,13 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:34:57 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 07:35:01 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/22 08:37:39 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_putstr_print(char *s)
+int	ft_putstr_print(char *s)
 {
 	int	len;
 

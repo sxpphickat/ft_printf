@@ -6,15 +6,15 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:02 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 07:35:07 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/22 08:37:27 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		ft_putnbr_print(int n)
+int	ft_putnbr_print(int n)
 {
-	char	c;
+	char		c;
 	static int	len;
 
 	len = 0;
@@ -39,6 +39,3 @@ int		ft_putnbr_print(int n)
 	len++;
 	return (len);
 }
-
-
-
