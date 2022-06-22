@@ -2,6 +2,9 @@ NAME		= libftprintf.a
 
 SRC			= *.c
 
+SRC			= ft_printf.c ft_putchar_print.c ft_putstr_print.c ft_putnbr_print.c\
+			  ft_putunbr_print.c ft_hex_print.c ft_pointeraddress_print.c
+
 OBJ			= $(SRC:.c=.o)
 
 CC			= cc

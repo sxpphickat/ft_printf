@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 14:31:44 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/21 15:38:48 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/22 07:33:16 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 
 int	ft_printf(const char *s, ...);
+int		ft_printf(const char *s, ...);
 int		ft_putunbr_print(unsigned int n);
 int		ft_hex_print(char xX, unsigned int	nb);
 int		ft_pointeraddress_print(unsigned long nb);
