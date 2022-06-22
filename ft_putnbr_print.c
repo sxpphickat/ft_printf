@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:02 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 08:37:27 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/22 09:46:22 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	ft_putnbr_print(int n)
 	char		c;
 	static int	len;
 
-	len = 0;
 	if (n == -2147483648)
 	{
 		write(1, "-2147483648", 11);

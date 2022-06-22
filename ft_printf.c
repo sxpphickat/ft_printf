@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:22 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 08:52:18 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/22 10:25:40 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	ft_print_params(char c, va_list params)
 
 int	main(void)
 {
-	ft_printf("len: %i\n", ft_printf("%x\n", 1234124));
-	printf("len: %i\n", printf("%x\n", 1234124));
+	ft_printf("len: %i\n", ft_printf("%s\n", "\0"));
+	printf("len: %i\n", printf("%s\n", "\0"));
 }
 */
