@@ -12,19 +12,34 @@
 
 #include "ft_printf.h"
 
+static int	ft_intlen_print(int c)
+{
+	int	len;
+
+	if (c == 0)
+		return (1);
+	len = 0;
+	if (c < 0)
+		len++;
+	while (c)
+	{
+		c = c / 10;
+		len++;
+	}
+	return (len);
+}
+
 int	ft_putnbr_print(int n)
 {
-	static int	len_n;
+	int		len_n;
 	long int	un;
 
-	// adicionar um contador sepadado;
-	len_n = 0;
+	len_n = ft_intlen_print(n);
 	un = n;
 	if (n < 0)
 	{
 		un *= -1;
 		write (1, "-", 1);
-		len_n++;
 	}
 	if (un >= 10)
 	{
@@ -32,7 +47,6 @@ int	ft_putnbr_print(int n)
 	}
 	un = (un % 10) + 48;
 	ft_putchar_print(un);
-	len_n++;
 	return (len_n);
 }
 
@@ -43,6 +57,6 @@ int	main (void)
 	int	tamanho;
 
 	tamanho = ft_putnbr_print(0);
-	printf("%i\n", tamanho);
+	printf("\n len: %i\n", tamanho);
 	return (0);
 }*/
