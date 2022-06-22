@@ -73,9 +73,9 @@ int	ft_print_params(char c, va_list params)
 
 int	main(void)
 {
-	printf("%i", printf(" %d %d | ", INT_MAX, INT_MAX));
 	printf("\n");
-	printf("%i", ft_printf(" %d %d | ", INT_MAX, INT_MAX));
+	printf("len: %i", ft_printf(" %u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42));
 	printf("\n");
+	printf("len: %i", printf(" %u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42));
 }
 */
