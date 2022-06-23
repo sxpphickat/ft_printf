@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:38 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/23 10:09:04 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/23 11:05:41 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ static int	ft_hexlen_print(unsigned int c)
 	if (c == 0)
 		return (1);
 	len = 0;
-	if (c < 0)
-		len++;
 	while (c)
 	{
 		c = c / 16;
