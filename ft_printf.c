@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:22 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 15:57:38 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:16:15 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,13 @@ int	ft_print_params(char c, va_list params)
 	return (len);
 }
 
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 #include <limits.h>
 
 int	main(void)
 {
 	printf("\n");
-	printf("len: %i", ft_printf(" %u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42));
+	printf("len: %i", ft_printf(" %i", INT_MAX));
 	printf("\n");
-	printf("len: %i", printf(" %u %u %u %u %u %u %u", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42));
-}
-*/
+	printf("len: %i", printf(" %i", INT_MAX));
+}*/

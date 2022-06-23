@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:34:32 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/23 09:55:34 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:09:51 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_intlen_print(unsigned int c)
 int	ft_putunbr_print(unsigned int n)
 {
 	char		c;
-	int	len_u;
+	int			len_u;
 
 	len_u = ft_intlen_print(n);
 	if (n >= 10)

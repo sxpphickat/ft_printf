@@ -6,20 +6,37 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:38 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 15:56:46 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:09:04 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_hexlen_print(unsigned int c)
+{
+	int	len;
+
+	if (c == 0)
+		return (1);
+	len = 0;
+	if (c < 0)
+		len++;
+	while (c)
+	{
+		c = c / 16;
+		len++;
+	}
+	return (len);
+}
+
 int	ft_hex_print(char xx, unsigned int nb)
 {
-	static int		len_h;
+	int				len_h;
 	unsigned int	a;
 	char			*xy;
 	char			*x;
 
-	len_h = 0;
+	len_h = ft_hexlen_print(nb);
 	x = "0123456789abcdef";
 	xy = "0123456789ABCDEF";
 	a = 0;
@@ -33,6 +50,5 @@ int	ft_hex_print(char xx, unsigned int nb)
 		write(1, &x[a], 1);
 	if (xx == 'X')
 		write(1, &xy[a], 1);
-	len_h++;
 	return (len_h);
 }

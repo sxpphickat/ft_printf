@@ -6,19 +6,36 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:32 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/22 15:57:20 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:05:33 by vipereir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	ft_hexlen_print(unsigned long c)
+{
+	int	len;
+
+	if (c == 0)
+		return (1);
+	len = 0;
+	if (c < 0)
+		len++;
+	while (c)
+	{
+		c = c / 16;
+		len++;
+	}
+	return (len);
+}
+
 int	ft_pointeraddress_print(unsigned long nb)
 {
-	static int		len_p;
+	int				len_p;
 	unsigned long	a;
 	char			*x;
 
-	len_p = 0;
+	len_p = ft_hexlen_print(nb);
 	x = "0123456789abcdef";
 	a = 0;
 	if (nb > 0)
@@ -28,6 +45,5 @@ int	ft_pointeraddress_print(unsigned long nb)
 			ft_pointeraddress_print(nb / 16);
 	}
 	write(1, &x[a], 1);
-	len_p++;
 	return (len_p);
 }
