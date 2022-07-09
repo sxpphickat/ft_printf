@@ -6,7 +6,7 @@
 /*   By: vipereir <vipereir@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 07:35:22 by vipereir          #+#    #+#             */
-/*   Updated: 2022/06/30 07:39:16 by vipereir         ###   ########.fr       */
+/*   Updated: 2022/07/07 21:58:19 by sphh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,10 @@ int	ft_printf(const char *s, ...)
 	len = 0;
 	while (*s)
 	{
-		if (*s == '%')
-		{
-			len += ft_print_params(*++s, params);
-			s++;
-		}
-		else if (*s != '%' && *s != '\0')
-		{
-			write(1, s, 1);
-			s++;
-			len++;
-		}
+		if (*s++ == '%')
+			len += ft_print_params(*(s)++, params);
+		else if (*--s != '\0')
+			len += write(1, s++, 1);
 	}
 	va_end(params);
 	return (len);
